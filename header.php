@@ -17,16 +17,29 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+![endif]-->
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
-	<header id="masthead" class="site-header" role="banner">
+	<?php get_template_part( 'template-parts/header', 'nav' ) ?>
+	<header id="masthead" class="site-header intro-header" role="banner" style="background-image: url('<?php echo get_header_image(); ?>')">
 
-		<div class="site-branding">
-			<?php get_template_part( 'template-parts/header', 'nav' ) ?>
-		</div><!-- .site-branding -->
+		<div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Header Text</h1>
+                        <hr class="small">
+                        <span class="subheading">Theme Based on Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 	</header><!-- #masthead -->
 

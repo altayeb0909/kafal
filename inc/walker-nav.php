@@ -69,7 +69,7 @@ if ( ! class_exists( 'Walker_Nav_top' ) ) {
 					$class_names .= ' dropdown';
 				}
 				if ( in_array( 'current-menu-item', $classes ) ) {
-					$class_names .= ' active';
+					$class_names .= ' actives';
 				}
 				$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 				$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
