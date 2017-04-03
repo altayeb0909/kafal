@@ -1,4 +1,13 @@
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top" id="top-nav">
+<?php
+/**
+ * Template part for displaying top navigation
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package kafal
+ */
+
+?><nav class="navbar navbar-default navbar-custom navbar-fixed-top" id="top-nav">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header page-scroll">

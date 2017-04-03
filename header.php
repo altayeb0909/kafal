@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package kafal
  */
 
 ?><!DOCTYPE html>
@@ -25,7 +25,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kafal' ); ?></a>
 	<?php get_template_part( 'template-parts/header', 'nav' ) ?>
 	<header id="masthead" class="site-header intro-header" role="banner" style="background-image: url('<?php echo get_header_image(); ?>')">
 
@@ -43,4 +43,4 @@
 
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content container">

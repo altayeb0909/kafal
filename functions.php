@@ -1,10 +1,10 @@
 <?php
 /**
- * _s functions and definitions
+ * Kafal functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package _s
+ * @package kafal
  */
 
 if ( ! function_exists( 'kafal_setup' ) ) :
@@ -19,8 +19,6 @@ function kafal_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on _s, use a find and replace
-	 * to change 'kafal' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'kafal', get_template_directory() . '/languages' );
 
@@ -115,17 +113,31 @@ function kafal_scripts() {
 	
 	wp_enqueue_style( 'kafal-font-open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
 
-	wp_enqueue_script( 'kafal-navigation', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '3.3.7', true );
+	wp_enqueue_script( 'kafal-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '3.3.7', true );
 
-	wp_enqueue_script( 'kafal-skip-link-focus-fix', get_template_directory_uri() . '/js/clean-blog.js', array(), '1.0', true );
+	wp_enqueue_script( 'kafal-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1.0', true );
 	
-	wp_enqueue_script( 'kafal-clean-blog-js', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'kafal-clean-blog-js', get_template_directory_uri() . '/js/clean-blog.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kafal_scripts' );
+
+if ( ! function_exists( 'kafal_custom_excerpt_length' ) ) {
+	function kafal_custom_excerpt_length() {
+		return 50;
+	}
+	add_filter( 'excerpt_length', 'kafal_custom_excerpt_length' );
+}
+if ( ! function_exists( 'kafal_excerpt_more' ) ) {
+	function kafal_excerpt_more() {
+		global $post;
+		return '...<a href="' . get_the_permalink() . '" title="Read More" >Read More → </a>';
+	}
+	add_filter( 'excerpt_more', 'kafal_excerpt_more' );
+}
 
 /**
  * Implement the Custom Header feature.
