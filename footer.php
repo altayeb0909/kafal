@@ -13,11 +13,11 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer text-center" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kafal' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'kafal' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'kafal' ), 'kafal', '<a href="https://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<a href="<?php echo esc_url( 'https://shubhampandey.in/kafal' );?>" rel="designer">Kafal</a>
+			<span>Powered by</span>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kafal' ) ); ?>"><?php printf( esc_html( 'WordPress' ) ); ?></a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
