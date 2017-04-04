@@ -27,11 +27,11 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kafal' ); ?></a>
 	<?php get_template_part( 'template-parts/header', 'nav' ) ?>
-	<header id="masthead" class="site-header intro-header" role="banner" style="background-image: url('<?php echo get_header_image(); ?>')">
+	<header id="masthead" class="site-header intro-header" role="banner" >
 
 		<div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div id="header-text" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <?php kafal_header_title();?>
                 </div>
             </div>
