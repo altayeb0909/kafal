@@ -4,10 +4,11 @@ Theme URI: https://shubhampandey.in/kafal
 Author: Shubham Pandey
 Author URI: http://shubhampandey.in
 Description: A Bootstrap Theme Based on Clean Blog Template from Start Bootstrap. Created in Himalayas.
+Version: 1.0.beta
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kafal
-Tags: 
+Tags: light, one-column, flexible-width, custom-header, custom-menu, editor-style, featured-images, rtl-language-support, sticky-post, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -91,6 +92,17 @@ Alignments
 }
 .site-footer a{
 	color: #777;
+}
+.post-info{
+	font-size: 0.8em;
+	font-style: italic;
+}
+.post-info span:not(:last-child):after{
+	content: "\00a0\00a0/\00a0\00a0";
+}
+.post-heading .meta.posted-on{
+	font-weight: 400;
+	margin-top: 0.8em;
 }
 /* ===== == = === 48em (768px) === = == ===== */
 

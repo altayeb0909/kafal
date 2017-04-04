@@ -32,11 +32,7 @@
 		<div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>Header Text</h1>
-                        <hr class="small">
-                        <span class="subheading">Theme Based on Bootstrap</span>
-                    </div>
+                    <?php kafal_header_title();?>
                 </div>
             </div>
         </div>

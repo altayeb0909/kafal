@@ -123,18 +123,69 @@ function kafal_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'kafal_scripts' );
 
+/**
+ * Function fpr returning excerpt length.
+ */
 if ( ! function_exists( 'kafal_custom_excerpt_length' ) ) {
 	function kafal_custom_excerpt_length() {
 		return 50;
 	}
 	add_filter( 'excerpt_length', 'kafal_custom_excerpt_length' );
 }
+
+/**
+ * Function for continue reading excerpts.
+ */
 if ( ! function_exists( 'kafal_excerpt_more' ) ) {
 	function kafal_excerpt_more() {
 		global $post;
-		return '...<a href="' . get_the_permalink() . '" title="Read More" >Read More → </a>';
+		return '... <a href="' . get_the_permalink() . '" title="Read More" >' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'kafal' ) . '</a>';
 	}
 	add_filter( 'excerpt_more', 'kafal_excerpt_more' );
+}
+
+/**
+ * Function for rendering site heading.
+ */
+function kafal_site_heading() {
+	global $post;
+	if ( is_single() || is_page() ) {
+		the_title( '<h1>', '</h1>' );
+	} else {
+		echo '<h1>' . 'Shubham' . '</h1><hr class="small">';
+	}
+}
+
+/**
+ * Function for rendering site sub-heading.
+ */
+function kafal_site_subheading() {
+	if ( is_single() || is_page() ) {
+		?>
+		<span class="meta posted-on"><?php kafal_posted_on();?></span>
+		<?php
+	} else {
+		echo '<span class="subheading">' . 'Shubham' . '</span>';
+	}
+}
+
+/**
+ * Function for rendering titles of the page.
+ */
+function kafal_header_title() {
+	if ( is_single() || is_page() ) {
+		$classes = 'post-heading';
+	} else {
+		$classes = 'site-heading';
+	}
+	?>
+	<div <?php post_class( "$classes" );?>>
+	<?php
+		kafal_site_heading();
+		kafal_site_subheading();
+	?>
+	</div>
+	<?php
 }
 
 /**
