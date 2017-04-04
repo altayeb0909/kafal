@@ -44,18 +44,19 @@ function kafal_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'kafal' ) );
 		if ( $categories_list && kafal_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'kafal' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links"><div class="sr-only">Categories</div><i class="fa fa-folder-open"></i> ' . $categories_list . "</span>" ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'kafal' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'kafal' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links"><div class="sr-only">Tags</div><i class="fa fa-tags" aria-hidden="true"></i> ' . $tags_list . "</span>" ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
+		echo '<span class="comments-link"><i class="fa fa-comments-o" aria-hidden="true"></i>
+';
 		/* translators: %s: post title */
 		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'kafal' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
