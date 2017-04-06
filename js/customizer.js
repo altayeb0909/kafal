@@ -33,7 +33,7 @@
 					'clip': 'auto',
 					'position': 'relative'
 				} );
-				$( '.site-title a, .site-description' ).css( {
+				$( '.site-heading h1, .site-heading .subheading, .intro-header .post-heading, .intro-header .post-heading .meta a' ).css( {
 					'color': to
 				} );
 			}

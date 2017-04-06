@@ -10,7 +10,7 @@
 ?><nav class="navbar navbar-default navbar-custom navbar-fixed-top" id="top-nav">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header page-scroll">
+		<div class="navbar-header page-scroll site-title">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			<span class="sr-only">Toggle navigation</span>
 			<i class="fa fa-bars"></i>

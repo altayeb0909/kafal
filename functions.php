@@ -175,16 +175,28 @@ function kafal_site_subheading() {
  * Function for parallex image.
  */
 function kafal_parallex() {
+	$header_image = '';
+	if ( is_single() || is_page() ) {
+		global $post;
+		$thumb_url = get_the_post_thumbnail_url( $post->ID );
+		if ( $thumb_url ) {
+			$header_image = $thumb_url;
+		} else {
+			$header_image = get_header_image();
+		}
+	} else {
+		$header_image = get_header_image();
+	}
 	echo '<style type="text/css">
 #masthead {
-	background: transparent url(' . get_header_image() . ') center center no-repeat fixed;
+	background: transparent url(' . esc_url( $header_image ) . ') center center no-repeat fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	background-position: center 0px;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' . get_header_image() . '",sizingMethod="scale");
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' . get_header_image() . '",sizingMethod="scale")";
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' . esc_url( $header_image ) . '",sizingMethod="scale");
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' . esc_url( $header_image ) . '",sizingMethod="scale")";
 	}
 </style>';
 }
