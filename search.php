@@ -41,8 +41,10 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
+		<div id="sidebar" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<?php get_sidebar(); ?>
+		</div>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

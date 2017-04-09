@@ -8,13 +8,13 @@
  * @version 1.0
  */
 
-if ( ! class_exists( 'Walker_Nav_top' ) ) {
+if ( ! class_exists( 'Walker_Nav_Top' ) ) {
 	/**
 	 * Walker Class for Manupulating Navigation Menus
 	 *
 	 * @since Kafal 1.0
 	 */
-	class Walker_Nav_top extends Walker_Nav_Menu {
+	class Walker_Nav_Top extends Walker_Nav_Menu {
 		/**
 		 * Ends the list of after the elements are added.
 		 *

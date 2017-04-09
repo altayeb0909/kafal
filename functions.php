@@ -189,6 +189,7 @@ function kafal_parallex() {
 	}
 	echo '<style type="text/css">
 #masthead {
+	background-color: #696969;
 	background: transparent url(' . esc_url( $header_image ) . ') center center no-repeat fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

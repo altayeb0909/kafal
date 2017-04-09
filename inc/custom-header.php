@@ -17,12 +17,15 @@
  * @uses kafal_header_style()
  */
 function kafal_custom_header_setup() {
+	$default = get_template_directory_uri() . '/img/default-header.jpg';
 	add_theme_support( 'custom-header', apply_filters( 'kafal_custom_header_args', array(
-		'default-image'          => '',
+		'default-image'          => $default,
+		'default-color'          => 'f0f0f0',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
+		'flex-width'             => true,
 		'wp-head-callback'       => 'kafal_header_style',
 	) ) );
 }

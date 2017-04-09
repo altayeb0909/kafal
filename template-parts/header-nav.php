@@ -26,7 +26,7 @@
 					'menu_class' => 'nav navbar-nav navbar-right',
 					'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
 					'depth' => 0,
-					'walker' => new Walker_Nav_top(),
+					'walker' => new Walker_Nav_Top(),
 				);
 				wp_nav_menu( $args );
 			?>

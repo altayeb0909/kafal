@@ -101,8 +101,19 @@ Alignments
 	content: "\00a0\00a0/\00a0\00a0";
 }
 .post-heading .meta.posted-on{
-	font-weight: 400;
+	font-weight: 800;
 	margin-top: 0.8em;
+}
+.content-area .sticky{
+	background: #ddd;
+	padding: 30px;
+	border-radius: 20px;
+}
+#header-text .site-heading .subheading{
+	font-weight: 800;
+}
+.intro-header .post-heading{
+	padding-left: 15px;
 }
 /* ===== == = === 48em (768px) === = == ===== */
 
