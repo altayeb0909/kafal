@@ -154,7 +154,7 @@ function kafal_site_heading() {
 	if ( is_single() || is_page() ) {
 		the_title( '<h1>', '</h1>' );
 	} else {
-		echo '<h1>' . 'Shubham' . '</h1><hr class="small">';
+		echo '<h1 class="headline">' . get_theme_mod( 'kafal_headline', 'Kafal' ) . '</h1><hr class="small">'; // WPCS: XSS OK.
 	}
 }
 
@@ -167,7 +167,7 @@ function kafal_site_subheading() {
 		<span class="meta posted-on"><?php kafal_posted_on();?></span>
 		<?php
 	} else {
-		echo '<span class="subheading">' . 'Shubham' . '</span>';
+		echo '<span class="subheading">' . get_theme_mod( 'kafal_subheading', 'Clean Bootstrap Theme' ) . '</span>'; // WPCS: XSS OK.
 	}
 }
 

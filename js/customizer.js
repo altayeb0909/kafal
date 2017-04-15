@@ -39,4 +39,16 @@
 			}
 		} );
 	} );
+
+	// Site Header Text
+	wp.customize( 'kafal_headline', function( value ) {
+		value.bind( function( to ) {
+			$( '.headline' ).text( to );
+		} );
+	} );
+	wp.customize( 'kafal_subheading', function( value ) {
+		value.bind( function( to ) {
+			$( '.subheading' ).text( to );
+		} );
+	} );
 } )( jQuery );
