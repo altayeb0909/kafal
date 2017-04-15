@@ -51,4 +51,9 @@
 			$( '.subheading' ).text( to );
 		} );
 	} );
+	wp.customize( 'kafal_header_color', function( value ) {
+		value.bind( function( to ) {
+			$( '#masthead' ).css( 'background-color', to );
+		} );
+	} );
 } )( jQuery );
