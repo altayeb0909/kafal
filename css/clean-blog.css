@@ -10,7 +10,7 @@ body {
 }
 p {
   line-height: 1.5;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 p a {
   text-decoration: underline;
@@ -23,6 +23,8 @@ h5,
 h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 a {
   color: #333333;

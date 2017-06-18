@@ -105,11 +105,11 @@ add_action( 'widgets_init', 'kafal_widgets_init' );
 function kafal_scripts() {
 	wp_enqueue_style( 'kafal-style', get_stylesheet_uri(), array( 'kafal-bootstrap', 'kafal-fa', 'kafal-clean-blog-css' ), '4342017' );
 
-	wp_enqueue_style( 'kafal-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7' );
+	wp_enqueue_style( 'kafal-bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.7' );
 	
-	wp_enqueue_style( 'kafal-fa', get_template_directory_uri() . '/css/font-awesome.min.css', array( 'kafal-bootstrap' ), '4.6.3' );
+	wp_enqueue_style( 'kafal-fa', get_template_directory_uri() . '/css/font-awesome.css', array( 'kafal-bootstrap' ), '4.6.3' );
 
-	wp_enqueue_style( 'kafal-clean-blog-css', get_template_directory_uri() . '/css/clean-blog.min.css', array( 'kafal-bootstrap' ), '1.0' );
+	wp_enqueue_style( 'kafal-clean-blog-css', get_template_directory_uri() . '/css/clean-blog.css', array( 'kafal-bootstrap' ), '1.0' );
 	
 	wp_enqueue_style( 'kafal-font-open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
 
@@ -124,6 +124,16 @@ function kafal_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kafal_scripts' );
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function kafal_add_editor_styles() {
+	add_editor_style( get_template_directory_uri() . '/css/bootstrap.css' );
+	add_editor_style( get_template_directory_uri() . '/css/clean-blog.css' );
+	add_editor_style( 'style.css' );
+}
+add_action( 'admin_init', 'kafal_add_editor_styles' );
 
 /**
  * Function fpr returning excerpt length.
@@ -141,7 +151,7 @@ if ( ! function_exists( 'kafal_custom_excerpt_length' ) ) {
 if ( ! function_exists( 'kafal_excerpt_more' ) ) {
 	function kafal_excerpt_more() {
 		global $post;
-		return '... <a href="' . get_the_permalink() . '" title="Read More" >' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'kafal' ) . '</a>';
+		return '... <a href="' . get_the_permalink() . '" title="Read More" class="read-more">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'kafal' ) . '</a>';
 	}
 	add_filter( 'excerpt_more', 'kafal_excerpt_more' );
 }

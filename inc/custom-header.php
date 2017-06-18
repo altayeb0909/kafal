@@ -18,8 +18,9 @@
  */
 function kafal_custom_header_setup() {
 	$default = get_template_directory_uri() . '/img/default-header.jpg';
+	// echo $default;
 	add_theme_support( 'custom-header', apply_filters( 'kafal_custom_header_args', array(
-		'default-image'          => $default,
+		'default-image'          => "$default",
 		'default-color'          => 'f0f0f0',
 		'default-text-color'     => 'ffffff',
 		'width'                  => 1000,
@@ -28,6 +29,13 @@ function kafal_custom_header_setup() {
 		'flex-width'             => true,
 		'wp-head-callback'       => 'kafal_header_style',
 	) ) );
+	register_default_headers( array(
+		'default-image' => array(
+		'url'           => get_stylesheet_directory_uri() . '/img/default-header.jpg',
+		'thumbnail_url' => get_stylesheet_directory_uri() . '/img/default-header.jpg',
+		'description'   => __( 'Default Header Image', 'kafal' )
+		),
+	) );
 }
 add_action( 'after_setup_theme', 'kafal_custom_header_setup' );
 

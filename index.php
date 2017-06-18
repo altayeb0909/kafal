@@ -40,8 +40,12 @@ get_header(); ?>
 
 				endwhile;
 
-				the_posts_navigation();
-
+				the_posts_navigation(array(
+					'mid_size' => 2,
+					'prev_text' => __( 'Older Posts', 'kafal' ),
+					'next_text' => __( 'Newer Posts', 'kafal' ),
+					) 
+				);
 			else :
 
 				get_template_part( 'template-parts/content', 'none' );

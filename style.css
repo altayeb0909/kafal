@@ -8,7 +8,7 @@ Version: 1.0.beta
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kafal
-Tags: light, one-column, flexible-width, custom-header, custom-menu, editor-style, featured-images, rtl-language-support, sticky-post, translation-ready
+Tags: one-column, custom-header, custom-menu, editor-style, featured-images, rtl-language-support, sticky-post, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -23,7 +23,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 body{
 	word-wrap: break-word;
 }
-
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -115,10 +114,175 @@ Alignments
 .intro-header .post-heading{
 	padding-left: 15px;
 }
+#main img,
+#main figure,
+#main figure img{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.read-more{
+	color: #21759b;
+}
+#header-text{
+	text-shadow: 1px 1px 1px #888;
+}
+#sidebar{
+	clear: both;
+}
+.navigation.posts-navigation .nav-links{
+	height: 5em;
+}
+.navigation.posts-navigation .nav-links div{
+	display: inline;
+}
+.navigation.posts-navigation .nav-links div a{
+	color: white;
+	padding: 0.5em;
+	cursor: pointer;
+	background-color: #5bc0de;
+	font-weight: bold;
+}
+.navigation.posts-navigation .nav-links .nav-next a{
+	float: right;
+}
+.navigation.posts-navigation .nav-links .nav-previous a{
+	float: left;
+}
+.navigation.posts-navigation .nav-links div a:hover{
+	background-color: #31b0d5;
+	text-decoration: none;
+}
+.comment-list,
+.comment-list ol,
+.comment-list ol ol{
+	list-style: none;
+}
+.comment-list .comment-content ol{
+	list-style: initial;
+}
+.comment-list{
+	padding: 0;
+}
+.comment-list .comment,
+.comment-list ol.children{
+	border: 1px solid #ddd;
+	border-right: 0px;
+	border-bottom: 0px;
+	padding: 1em;
+	margin-top: 1em;
+}
+.comment-meta{
+	padding: 0em;
+}
+.comment-metadata{
+	margin-top: -12px;
+    margin-bottom: 15px;
+    margin-left: 4em;
+    font-size: 0.7em;
+}
+#main .comment-author.vcard img{
+	display: inline;
+	border-radius: 50%;
+}
+.comment-content{
+	margin: 1em; 
+}
+.comment-body .reply{
+	margin-left: 1em;
+	margin-bottom: 1em;
+}
+.comment-body .reply a{
+	color: #337ab7;
+	font-size: 0.9em;
+}
+.comment-form .form-group{
+	font-size: 0.9em;
+	display: flex;
+	flex-wrap: wrap;
+}
+.wp-caption,
+.gallery-caption{
+	border: 1px solid #ddd;
+	padding: 0.3em;
+	font-size: 0.7em;
+}
+.wp-caption-text{
+	text-align: center;
+}
+.wp-caption img{
+	margin: 0 auto;
+}
 /* ===== == = === 48em (768px) === = == ===== */
 
 @media only screen and (max-width : 48em) {
 	.logged-in.admin-bar #top-nav{
 		margin-top: 46px;
 	}
+	.comment-form .form-group{
+		display: block;
+	}
+}
+/* WordPress Gallery 
+------------------------------------------ */
+
+.gallery {
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+}
+
+.gallery:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.gallery-item {
+	margin: 0;
+	float: left;
+	padding: 0.5em;
+}
+
+.gallery-item img {
+	width: 100%;
+}
+
+.gallery-columns-1 .gallery-item {
+    width: 100%;
+    float: none;
+}
+.gallery-columns-2 .gallery-item {
+    width: 50%
+}
+.gallery-columns-3 .gallery-item {
+    width: 33.3333%
+}
+.gallery-columns-4 .gallery-item {
+    width: 25%
+}
+.gallery-columns-5 .gallery-item {
+    width: 20%
+}
+.gallery-columns-6 .gallery-item {
+    width: 16.6667%
+}
+.gallery-columns-7 .gallery-item {
+    width: 14.2857%
+}
+.gallery-columns-8 .gallery-item {
+    width: 12.5%
+}
+.gallery-columns-9 .gallery-item {
+    width: 11.1111%
+}
+
+.gallery-columns-2 .gallery-item:nth-child(2n+1),
+.gallery-columns-3 .gallery-item:nth-child(3n+1),
+.gallery-columns-4 .gallery-item:nth-child(4n+1),
+.gallery-columns-5 .gallery-item:nth-child(5n+1),
+.gallery-columns-6 .gallery-item:nth-child(6n+1),
+.gallery-columns-7 .gallery-item:nth-child(7n+1),
+.gallery-columns-8 .gallery-item:nth-child(8n+1),
+.gallery-columns-9 .gallery-item:nth-child(9n+1) {
+	clear: left;
 }
