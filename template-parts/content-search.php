@@ -25,6 +25,7 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer post-info">
+		<hr />
 		<?php kafal_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

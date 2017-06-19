@@ -3,12 +3,12 @@ Theme Name: Kafal
 Theme URI: https://shubhampandey.in/kafal
 Author: Shubham Pandey
 Author URI: http://shubhampandey.in
-Description: A Bootstrap Theme Based on Clean Blog Template from Start Bootstrap. Created in Himalayas.
+Description: A Bootstrap Theme Based on Clean Blog Template from Start Bootstrap. A beutifully designed responsive blogging theme. Custom header with Parallax effect added.
 Version: 1.0.beta
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kafal
-Tags: one-column, custom-header, custom-menu, editor-style, featured-images, responsive-layout, rtl-language-support, sticky-post, translation-ready,  custom-colors, threaded-comments
+Tags: one-column, custom-header, custom-menu, editor-style, featured-images, responsive-layout, rtl-language-support, sticky-post, translation-ready,  custom-colors, threaded-comments, custom-background, theme-options
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -18,6 +18,18 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+
+Start Bootstrap - Clean Blog v3.3.7+1 (http://startbootstrap.com/template-overviews/clean-blog)
+Copyright 2013-2017 Start Bootstrap
+Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+
+Bootstrap v3.3.7 (http://getbootstrap.com)
+Copyright 2011-2017 Twitter, Inc.
+Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+
 */
 
 body{
@@ -293,7 +305,7 @@ Alignments
 	background: #efe;
 }
 .page .entry-footer{
-	padding: 1em;
+	padding: 0.5em;
 }
 #tinymce * {
 	margin-left: 1em;

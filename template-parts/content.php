@@ -37,6 +37,7 @@
 		endif;
 		?>
 		<div class="post-info"> 
+			<hr />
 			<?php kafal_entry_footer(); ?>
 		</div>
 </article><!-- #post-## -->

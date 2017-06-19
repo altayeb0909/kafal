@@ -22,6 +22,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
+		<hr />
 		<footer class="entry-footer post-info">
 			<?php
 				edit_post_link(
