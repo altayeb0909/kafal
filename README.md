@@ -4,13 +4,19 @@
 
 ---
 
-Contributors: automattic, Shubham Pandey
+Contributors: Shubham Pandey, Automattic
+
 Tags: one-column, custom-header, custom-menu, editor-style, featured-images, responsive-layout, rtl-language-support, sticky-post, translation-ready,  custom-colors, threaded-comments, custom-background, theme-options
+
 Requires at least: 4.0
+
 Tested up to: 4.8
+
 Stable tag: 1.0.0
+
 License: GNU General Public License v2 or later
-License URI: LICENSE
+
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ### Description
 
