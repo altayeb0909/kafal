@@ -65,6 +65,47 @@ function kafal_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	// Define and register starter content to showcase the theme on new sites.
+	$starter_content = array(
+		'widgets' => array(
+			// No widget initially
+			'sidebar-1' => array( '' ),
+		),
+
+		// Specify the core-defined pages to create and add custom thumbnails to some of them.
+		'posts' => array(
+			'home',
+			'about' => array(),
+			'contact' => array(),
+			'blog' => array(),
+		),
+
+		// Set up nav menus for each of the two areas registered in the theme.
+		'nav_menus' => array(
+			// Assign a menu to the "top" location.
+			'menu-1' => array(
+				'name' => __( 'Top Menu', 'kafal' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+		),
+	);
+
+	/**
+	 * Filters Kafal array of starter content.
+	 *
+	 * @since Kafal 1.0
+	 *
+	 * @param array $starter_content Array of starter content.
+	 */
+	$starter_content = apply_filters( 'kafal_starter_content', $starter_content );
+
+	add_theme_support( 'starter-content', $starter_content );
 }
 endif;
 add_action( 'after_setup_theme', 'kafal_setup' );
@@ -177,7 +218,7 @@ function kafal_site_subheading() {
 		<span class="meta posted-on"><?php kafal_posted_on();?></span>
 		<?php
 	} else {
-		echo '<span class="subheading">' . get_theme_mod( 'kafal_subheading', 'Clean Bootstrap Theme' ) . '</span>'; // WPCS: XSS OK.
+		echo '<span class="subheading">' . get_theme_mod( 'kafal_subheading', 'A Clean Blog Theme for your Content' ) . '</span>'; // WPCS: XSS OK.
 	}
 }
 

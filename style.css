@@ -8,7 +8,7 @@ Version: 1.0.beta
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kafal
-Tags: one-column, custom-header, custom-menu, editor-style, featured-images, rtl-language-support, sticky-post, translation-ready
+Tags: one-column, custom-header, custom-menu, editor-style, featured-images, responsive-layout, rtl-language-support, sticky-post, translation-ready,  custom-colors, threaded-comments
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -104,7 +104,7 @@ Alignments
 	margin-top: 0.8em;
 }
 .content-area .sticky{
-	background: #ddd;
+	background: #eee;
 	padding: 30px;
 	border-radius: 20px;
 }
@@ -164,13 +164,15 @@ Alignments
 .comment-list{
 	padding: 0;
 }
-.comment-list .comment,
-.comment-list ol.children{
+.comment-list .comment{
 	border: 1px solid #ddd;
 	border-right: 0px;
 	border-bottom: 0px;
 	padding: 1em;
 	margin-top: 1em;
+}
+.comment-list ol.children{
+	padding: 0;
 }
 .comment-meta{
 	padding: 0em;
@@ -285,4 +287,19 @@ Alignments
 .gallery-columns-8 .gallery-item:nth-child(8n+1),
 .gallery-columns-9 .gallery-item:nth-child(9n+1) {
 	clear: left;
+}
+.bypostauthor,
+.byuser{
+	background: #efe;
+}
+.page .entry-footer{
+	padding: 1em;
+}
+#tinymce * {
+	margin-left: 1em;
+	padding: 1em;
+	width: 700px;
+}
+#submit{
+	margin-right: 15px;
 }

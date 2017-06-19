@@ -77,7 +77,7 @@ function kafal_entry_footer() {
 			esc_html__( 'Edit %s', 'kafal' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		'<span class="edit-link">',
+		'<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;<span class="edit-link">',
 		'</span>'
 	);
 }

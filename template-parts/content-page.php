@@ -22,12 +22,12 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry-footer post-info">
 			<?php
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'kafal' ),
+						'<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;' . esc_html__( 'Edit %s', 'kafal' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',
@@ -36,4 +36,5 @@
 			?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
+	<hr />
 </article><!-- #post-## -->

@@ -95,7 +95,7 @@ if ( post_password_required() ) {
 		'cancel_reply_link' => __( 'Cancel Reply', 'kafal' ),
 		'label_submit'      => __( 'Post Comment', 'kafal' ),
 		'format'            => 'xhtml',
-		'class_submit'      => 'btn btn-info',
+		'class_submit'      => 'btn btn-info pull-right',
 
 		'comment_field' =>  '<div class="comment-form-comment form-group"><label class="control-label col-sm-2" for="comment">' . _x( 'Comment', 'noun', 'kafal' ) . '</label><div class="col-sm-10"><textarea id="comment" class="form-control" name="comment" placeholder="Your Comment Here" cols="45" rows="8" aria-required="true">' . '</textarea></div></div>',
 
@@ -110,3 +110,4 @@ if ( post_password_required() ) {
 	comment_form($args); ?>
 
 </div><!-- #comments -->
+<div class="col-xs-12"><hr /></div>

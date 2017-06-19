@@ -20,15 +20,17 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<?php
-				$args = array(
-					'theme_location' => 'menu-1',
-					'container' => 'ul',
-					'menu_class' => 'nav navbar-nav navbar-right',
-					'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
-					'depth' => 0,
-					'walker' => new Walker_Nav_Top(),
-				);
-				wp_nav_menu( $args );
+				if ( has_nav_menu( 'menu-1' ) ) {
+					$args = array(
+						'theme_location' => 'menu-1',
+						'container' => 'ul',
+						'menu_class' => 'nav navbar-nav navbar-right',
+						'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+						'depth' => 0,
+						'walker' => new Walker_Nav_Top(),
+					);
+					wp_nav_menu( $args );
+				}
 			?>
 		</div>
 	<!-- /.navbar-collapse -->
