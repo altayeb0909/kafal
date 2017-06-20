@@ -205,7 +205,7 @@ function kafal_site_heading() {
 	if ( is_single() || is_page() ) {
 		the_title( '<h1>', '</h1>' );
 	} else {
-		echo '<h1 class="headline">' . get_theme_mod( 'kafal_headline', 'Kafal' ) . '</h1><hr class="small">'; // WPCS: XSS OK.
+		echo '<h1 class="headline">' . esc_attr( get_theme_mod( 'kafal_headline', 'Kafal' ) ) . '</h1><hr class="small">';
 	}
 }
 
@@ -218,7 +218,7 @@ function kafal_site_subheading() {
 		<span class="meta posted-on"><?php kafal_posted_on();?></span>
 		<?php
 	} else {
-		echo '<span class="subheading">' . get_theme_mod( 'kafal_subheading', 'A Clean Blog Theme for your Content' ) . '</span>'; // WPCS: XSS OK.
+		echo '<span class="subheading">' . esc_attr( get_theme_mod( 'kafal_subheading', 'A Clean Blog Theme for your Content' ) ) . '</span>';
 	}
 }
 
@@ -238,11 +238,11 @@ function kafal_parallex() {
 	} else {
 		$header_image = get_header_image();
 	}
-	$header_color = get_theme_mod( 'kafal_header_color', '#696969' );
+	$header_color = esc_attr( get_theme_mod( 'kafal_header_color', '#696969' ) );
 	echo '<style type="text/css">
 #masthead {
 	background: transparent url(' . esc_url( $header_image ) . ') center center no-repeat fixed;
-	background-color: ' . $header_color . ';
+	background-color: ' . esc_url( $header_color ) . ';
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

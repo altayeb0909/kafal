@@ -34,7 +34,7 @@ function kafal_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'kafal_subheading' , array(
-		'default' => 'Clean Bootstrap Theme',
+		'default' => 'A Clean Blog Theme for your Content',
 		'transport' => 'postMessage',
 		'sanitize_callback' => 'kafal_text_sanitize',
 	) );

@@ -20,19 +20,20 @@ function kafal_posted_on() {
 	);
 
 	$posted_on = sprintf(
+		/* translators: %s: Post Date */
 		esc_html_x( ' on %s', 'post date', 'kafal' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 	if( ! is_home() ) {
 		global $post;
 		$post_id = $post->post_author;
-		$byline = sprintf(
-			esc_html_x( 'Posted by %s', 'post author', 'kafal' ),
+		/* translators: %s: Post Author Name */
+		$byline = sprintf( esc_html_x( 'Posted by %s', 'post author', 'kafal' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( $post_id ) ) . '">' . esc_html( get_the_author_meta( 'display_name', $post_id ) ) . '</a></span>'
 		);
 	} else {
-		$byline = sprintf(
-			esc_html_x( 'Posted by %s', 'post author', 'kafal' ),
+		/* translators: %s: Post Author Name */
+		$byline = sprintf( esc_html_x( 'Posted by %s', 'post author', 'kafal' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 	}

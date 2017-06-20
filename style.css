@@ -3,12 +3,25 @@ Theme Name: Kafal
 Theme URI: https://shubhampandey.in/kafal
 Author: Shubham Pandey
 Author URI: http://shubhampandey.in
-Description: A Bootstrap Theme Based on Clean Blog Template from Start Bootstrap. A beutifully designed responsive blogging theme. Custom header with Parallax effect added.
-Version: 1.0.beta
+Description: A Bootstrap Theme Based on Clean Blog Template from Start Bootstrap. A beautifully designed responsive blogging theme. Custom header with Parallax effect.
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kafal
-Tags: one-column, custom-header, custom-menu, editor-style, featured-images, responsive-layout, rtl-language-support, sticky-post, translation-ready,  custom-colors, threaded-comments, custom-background, theme-options
+Tags: one-column, custom-header, custom-menu, editor-style, featured-image-header, featured-images, rtl-language-support, sticky-post, translation-ready,  custom-colors, threaded-comments, custom-background
+
+Kafal WordPress Theme, Copyright 2017 Shubham Pandey
+Kafal is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -88,7 +101,6 @@ Alignments
 	margin-right: auto;
 }
 
-
 .post-preview a{
 	text-decoration: none;
 }
@@ -150,7 +162,7 @@ Alignments
 }
 .navigation.posts-navigation .nav-links div a{
 	color: white;
-	padding: 0.5em;
+	padding: 0.6em 1.2em;
 	cursor: pointer;
 	background-color: #5bc0de;
 	font-weight: bold;

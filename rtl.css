@@ -9,9 +9,35 @@ https://codex.wordpress.org/Right-to-Left_Language_Support
 
 */
 
-/*
 body {
 	direction: rtl;
 	unicode-bidi: embed;
 }
-*/
+.alignleft {
+	float: right;
+}
+.alignright {
+	float: left;
+}
+.navigation.posts-navigation .nav-links .nav-next a{
+	float: left;
+}
+.navigation.posts-navigation .nav-links .nav-previous a{
+	float: right;
+}
+.comment-metadata{
+    margin-right: 4em;
+}
+.comment-body .reply{
+	margin-right: 1em;
+}
+.gallery-item {
+	float: right;
+}
+#tinymce * {
+	margin-right: 1em;
+}
+#submit {
+    margin-left: 15px;
+    float: left !important;
+}

@@ -36,8 +36,10 @@
 			the_excerpt();
 		endif;
 		?>
-		<div class="post-info"> 
+		<div class="post-info">
+			<?php if( !is_home() ) : ?>
 			<hr />
+			<?php endif;?>
 			<?php kafal_entry_footer(); ?>
 		</div>
 </article><!-- #post-## -->
