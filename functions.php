@@ -238,11 +238,11 @@ function kafal_parallex() {
 	} else {
 		$header_image = get_header_image();
 	}
-	$header_color = esc_attr( get_theme_mod( 'kafal_header_color', '#696969' ) );
+	$header_color = get_theme_mod( 'kafal_header_color', '#696969' );
 	echo '<style type="text/css">
 #masthead {
 	background: transparent url(' . esc_url( $header_image ) . ') center center no-repeat fixed;
-	background-color: ' . esc_url( $header_color ) . ';
+	background-color: ' . esc_attr( $header_color ) . ';
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
