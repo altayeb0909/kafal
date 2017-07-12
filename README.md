@@ -12,7 +12,7 @@ Requires at least: 4.0
 
 Tested up to: 4.8
 
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 License: GNU General Public License v2 or later
 
@@ -78,6 +78,14 @@ Licence CC0 Public Domain - https://creativecommons.org/publicdomain/zero/1.0/de
 Kafal includes support for Infinite Scroll in Jetpack.
 
 ### Changelog
+
+1.0.3
+
+* Language File Updates
+
+1.0.2
+
+* Bug Fixes
 
 1.0.1
 
