@@ -28,6 +28,7 @@
 						'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
 						'depth' => 0,
 						'walker' => new Walker_Nav_Top(),
+						'fallback_cb' => 'wp_page_menu'
 					);
 					wp_nav_menu( $args );
 				}

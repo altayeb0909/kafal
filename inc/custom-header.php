@@ -64,7 +64,10 @@ function kafal_header_style() {
 		if ( ! display_header_text() ) :
 	?>
 		.site-title,
-		.site-description {
+		.site-description,
+		.subheading,
+		.headline,
+		.site-heading hr.small {
 			position: absolute;
 			clip: rect(1px, 1px, 1px, 1px);
 		}

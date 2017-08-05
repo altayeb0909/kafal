@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area hidden-print">
 
 	<?php
 	// You can start editing here -- including this comment!
@@ -77,11 +77,11 @@ if ( post_password_required() ) {
 
 	$fields =  array(
 
-		'author' => '<div class="comment-form-author form-group"><label class="control-label col-sm-2" for="author">' . __( 'Name', 'kafal' ) . '</label><div class="col-sm-10"><input id="author" placeholder=" ' . ( $req ? 'Required' : '' ) . '"  name="author" class="form-control" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>',
+		'author' => '<div class="comment-form-author form-group"><label class="control-label col-sm-2" for="author">' . __( 'Name *', 'kafal' ) . '</label><div class="col-sm-10"><input id="author" placeholder="' . ( $req ? 'Required' : '' ) . '"  name="author" class="form-control" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div></div>',
 
-		'email' => '<div class="comment-form-email form-group"><label class="control-label col-sm-2" for="email">' . __( 'Email', 'kafal' ) . '</label><div class="col-sm-10"><input id="email"  placeholder=" ' . ( $req ? 'Required' : '' ) . '" name="email" class="form-control" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>',
+		'email' => '<div class="comment-form-email form-group"><label class="control-label col-sm-2" for="email">' . __( 'Email *', 'kafal' ) . '</label><div class="col-sm-10"><input id="email"  placeholder="' . ( $req ? 'Required' : '' ) . '" name="email" class="form-control" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>',
 
-		'url' => '<div class="comment-form-url form-group"><label class="control-label col-sm-2" for="url">' . __( 'Website', 'kafal' ) . '</label><div class="col-sm-10">' . '<input id="url" name="url" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>',
+		'url' => '<div class="comment-form-url form-group"><label class="control-label col-sm-2" for="url">' . __( 'Websit *', 'kafal' ) . '</label><div class="col-sm-10">' . '<input id="url" name="url" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>',
 	);
 
 	$args = array(
@@ -96,7 +96,7 @@ if ( post_password_required() ) {
 		'format'            => 'xhtml',
 		'class_submit'      => 'btn btn-info pull-right',
 
-		'comment_field' =>  '<div class="comment-form-comment form-group"><label class="control-label col-sm-2" for="comment">' . _x( 'Comment', 'noun', 'kafal' ) . '</label><div class="col-sm-10"><textarea id="comment" class="form-control" name="comment" placeholder="Your Comment Here" cols="45" rows="8" aria-required="true">' . '</textarea></div></div>',
+		'comment_field' =>  '<div class="comment-form-comment form-group"><label class="control-label col-sm-2" for="comment">' . _x( 'Comment *', 'noun', 'kafal' ) . '</label><div class="col-sm-10"><textarea id="comment" class="form-control" name="comment" placeholder="Your Comment Here" cols="45" rows="8" aria-required="true">' . '</textarea></div></div>',
 
 		'fields' => apply_filters( 'comment_form_default_fields', $fields ),
 	);

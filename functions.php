@@ -202,10 +202,16 @@ if ( ! function_exists( 'kafal_excerpt_more' ) ) {
  */
 function kafal_site_heading() {
 	global $post;
+	$headline = '';
 	if ( is_single() || is_page() ) {
-		the_title( '<h1>', '</h1>' );
+		the_title( '<h1 class="headline-single">', '</h1>' );
+	} else if ( is_archive() ) {
+		the_archive_title( '<h1 class="headline-archive">', '</h1>' );
 	} else {
-		echo '<h1 class="headline">' . esc_attr( get_theme_mod( 'kafal_headline', 'Kafal' ) ) . '</h1><hr class="small">';
+		if ( is_home() || is_search() || is_404() ) {
+			$headline = get_bloginfo( 'name' );
+			echo '<h1 class="headline">' . esc_html( $headline ) . '</h1>';
+		}
 	}
 }
 
@@ -213,12 +219,19 @@ function kafal_site_heading() {
  * Function for rendering site sub-heading.
  */
 function kafal_site_subheading() {
+	$subheading = '';
 	if ( is_single() || is_page() ) {
 		?>
 		<span class="meta posted-on"><?php kafal_posted_on();?></span>
 		<?php
+	} else if ( is_archive() ) {
+		the_archive_description( '<hr class="small archive"><span class="subheading archive">', '</span>' );
 	} else {
-		echo '<span class="subheading">' . esc_attr( get_theme_mod( 'kafal_subheading', 'A Clean Blog Theme for your Content' ) ) . '</span>';
+		if ( is_home() || is_search() || is_404() ) {
+			$subheading = get_bloginfo( 'description' );
+		}
+		if( $subheading != '' )
+			echo '<hr class="small"><span class="subheading">' . esc_html( $subheading ) . '</span>';
 	}
 }
 

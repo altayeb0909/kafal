@@ -20,7 +20,7 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
+	<div class="clearfix"></div>
 	<?php if ( get_edit_post_link() ) : ?>
 		<hr />
 		<footer class="entry-footer post-info">

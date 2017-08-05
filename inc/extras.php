@@ -33,7 +33,7 @@ add_filter( 'body_class', 'kafal_body_classes' );
  */
 function kafal_pingback_header() {
 	if ( is_singular() && pings_open() ) {
-		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
+		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">' , "\n";
 	}
 }
 add_action( 'wp_head', 'kafal_pingback_header' );

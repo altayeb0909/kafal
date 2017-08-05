@@ -31,6 +31,7 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
+		<div class="clearfix"></div>
 		<div id="sidebar" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			<?php get_sidebar(); ?>
 		</div>

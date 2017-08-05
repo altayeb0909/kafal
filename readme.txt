@@ -4,7 +4,7 @@ Contributors: automattic, shubham9411
 Tags: one-column, custom-header, custom-menu, editor-style, featured-images, responsive-layout, rtl-language-support, sticky-post, translation-ready,  custom-colors, threaded-comments, custom-background, theme-options
 Requires at least: 4.0
 Tested up to: 4.8
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,12 @@ Kafal includes support for Infinite Scroll in Jetpack.
 
 ### Changelog
 
+1.0.4
+
+* User Feedback by @joyously
+	* CSS fixes
+	* Header text option changed to site title
+	
 1.0.3
 
 * Language File Updates

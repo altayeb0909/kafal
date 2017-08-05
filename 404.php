@@ -58,6 +58,7 @@ get_header(); ?>
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
+		<div class="clearfix"></div>
 	</div><!-- #primary -->
 
 <?php

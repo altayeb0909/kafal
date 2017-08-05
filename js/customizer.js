@@ -11,12 +11,34 @@
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
+			if( to == '' ) {
+				$( '.site-heading hr.small' ).css( {
+					'clip': 'rect(1px, 1px, 1px, 1px)',
+					'position': 'absolute'
+				} );
+			} else {
+				$( '.site-heading hr.small' ).css( {
+					'clip': 'auto',
+					'position': 'relative'
+				} );
+			}
+			$( '.site-title a, .headline' ).text( to );
 		} );
 	} );
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-description' ).text( to );
+			if( to == '' ) {
+				$( '.site-heading hr.small' ).css( {
+					'clip': 'rect(1px, 1px, 1px, 1px)',
+					'position': 'absolute'
+				} );
+			} else {
+				$( '.site-heading hr.small' ).css( {
+					'clip': 'auto',
+					'position': 'relative'
+				} );
+			}
+			$( '.subheading' ).text( to );
 		} );
 	} );
 
@@ -24,12 +46,12 @@
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to ) {
-				$( '.site-title a, .site-description' ).css( {
+				$( '.site-title, .site-description, .subheading, .headline, .site-heading hr.small' ).css( {
 					'clip': 'rect(1px, 1px, 1px, 1px)',
 					'position': 'absolute'
 				} );
 			} else {
-				$( '.site-title a, .site-description' ).css( {
+				$( '.site-title, .site-description, .subheading, .headline, .site-heading hr.small' ).css( {
 					'clip': 'auto',
 					'position': 'relative'
 				} );
@@ -40,17 +62,6 @@
 		} );
 	} );
 
-	// Site Header Text
-	wp.customize( 'kafal_headline', function( value ) {
-		value.bind( function( to ) {
-			$( '.headline' ).text( to );
-		} );
-	} );
-	wp.customize( 'kafal_subheading', function( value ) {
-		value.bind( function( to ) {
-			$( '.subheading' ).text( to );
-		} );
-	} );
 	wp.customize( 'kafal_header_color', function( value ) {
 		value.bind( function( to ) {
 			$( '#masthead' ).css( 'background-color', to );

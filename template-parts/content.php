@@ -36,6 +36,7 @@
 			the_excerpt();
 		endif;
 		?>
+		<div class="clearfix"></div>
 		<div class="post-info">
 			<?php if( !is_home() ) : ?>
 			<hr />

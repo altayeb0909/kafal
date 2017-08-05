@@ -4,7 +4,7 @@ Theme URI: https://shubhampandey.in/kafal
 Author: Shubham Pandey
 Author URI: http://shubhampandey.in
 Description: A Bootstrap Theme Based on Clean Blog Template from Start Bootstrap. A beautifully designed responsive blogging theme. Custom header with Parallax effect.
-Version: 1.0.3
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kafal
@@ -138,9 +138,7 @@ Alignments
 .intro-header .post-heading{
 	padding-left: 15px;
 }
-#main img,
-#main figure,
-#main figure img{
+img{
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -210,6 +208,8 @@ Alignments
 #main .comment-author.vcard img{
 	display: inline;
 	border-radius: 50%;
+	width: 48px;
+	height: 48px;
 }
 .comment-content{
 	margin: 1em; 
@@ -232,6 +232,7 @@ Alignments
 	border: 1px solid #ddd;
 	padding: 0.3em;
 	font-size: 0.7em;
+	max-width: 100%;
 }
 .wp-caption-text{
 	text-align: center;
@@ -267,10 +268,14 @@ Alignments
 	margin: 0;
 	float: left;
 	padding: 0.5em;
+	max-width: 100%;
 }
 
 .gallery-item img {
-	width: 100%;
+	margin: 0 auto;
+}
+.gallery-icon{
+	border: 1px #ddd solid;
 }
 
 .gallery-columns-1 .gallery-item {
@@ -319,11 +324,47 @@ Alignments
 .page .entry-footer{
 	padding: 0.5em;
 }
-#tinymce * {
+#tinymce {
 	margin-left: 1em;
 	padding: 1em;
 	width: 700px;
 }
 #submit{
 	margin-right: 15px;
+}
+.post-navigation a{
+	display: block;
+	text-align: center;
+}
+blockquote {
+	font-style: initial;
+}
+dd {
+	margin: 0 0 1.5em 0;
+}
+table caption{
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: center;
+}
+aside a{
+	color: #0085A1;
+}
+#wp-calendar,
+#wp-calendar th{
+	text-align: center;
+}
+.widget_calendar tbody a {
+	background-color: #007acc;
+	color: #fff;
+	font-weight: 700;
+	margin: -8px;
+	height: 2.2em;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.site-heading hr.small.archive{
+	position: relative;
+	clip: auto;
 }
