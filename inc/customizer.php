@@ -36,7 +36,7 @@ add_action( 'customize_register', 'kafal_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function kafal_customize_preview_js() {
-	wp_enqueue_script( 'kafal_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '2017005', true );
+	wp_enqueue_script( 'kafal_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170806', true );
 }
 add_action( 'customize_preview_init', 'kafal_customize_preview_js' );
 
