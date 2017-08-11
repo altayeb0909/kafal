@@ -20,7 +20,7 @@ function kafal_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 */
-	load_theme_textdomain( 'kafal', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'kafal' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -177,22 +177,15 @@ function kafal_add_editor_styles() {
 add_action( 'admin_init', 'kafal_add_editor_styles' );
 
 /**
- * Function fpr returning excerpt length.
- */
-if ( ! function_exists( 'kafal_custom_excerpt_length' ) ) {
-	function kafal_custom_excerpt_length() {
-		return 50;
-	}
-	add_filter( 'excerpt_length', 'kafal_custom_excerpt_length' );
-}
-
-/**
  * Function for continue reading excerpts.
  */
 if ( ! function_exists( 'kafal_excerpt_more' ) ) {
-	function kafal_excerpt_more() {
+	function kafal_excerpt_more( $more ) {
+		if( is_admin() ){
+			return $more;
+		}
 		global $post;
-		return '... <a href="' . get_the_permalink() . '" title="Read More" class="read-more">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'kafal' ) . '</a>';
+		return '&hellip; <a href="' . get_the_permalink() . '" title="' . __( 'Read More', 'kafal' ) . '" class="read-more">' . __( 'Continue reading', 'kafal' ) . '<span class="meta-nav">&rarr;</span></a>';
 	}
 	add_filter( 'excerpt_more', 'kafal_excerpt_more' );
 }

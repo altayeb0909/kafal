@@ -12,7 +12,7 @@
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header page-scroll site-title">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<span class="sr-only">Toggle navigation</span>
+			<span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'kafal' ); ?></span>
 			<i class="fa fa-bars"></i>
 			</button>
 			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>

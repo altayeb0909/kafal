@@ -4,15 +4,15 @@
 
 ---
 
-Contributors: Shubham Pandey, Automattic
+Contributors: Shubham Pandey
 
-Tags: one-column, custom-header, custom-menu, editor-style, featured-images, responsive-layout, rtl-language-support, sticky-post, translation-ready,  custom-colors, threaded-comments, custom-background, theme-options
+Tags: blog, one-column, custom-header, custom-menu, editor-style, featured-images, responsive-layout, rtl-language-support, sticky-post, translation-ready,  custom-colors, threaded-comments, custom-background, theme-options
 
 Requires at least: 4.0
 
-Tested up to: 4.8
+Tested up to: 4.8.1
 
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 
 License: GNU General Public License v2 or later
 
@@ -78,6 +78,10 @@ Licence CC0 Public Domain - https://creativecommons.org/publicdomain/zero/1.0/de
 Kafal includes support for Infinite Scroll in Jetpack.
 
 ### Changelog
+
+1.0.6
+
+* Minor changes
 
 1.0.5
 

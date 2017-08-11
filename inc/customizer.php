@@ -39,10 +39,3 @@ function kafal_customize_preview_js() {
 	wp_enqueue_script( 'kafal_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170806', true );
 }
 add_action( 'customize_preview_init', 'kafal_customize_preview_js' );
-
-/**
- * Function for sanitize header text
- */
-function kafal_text_sanitize( $text ) {
-	return esc_html( $text );
-}
