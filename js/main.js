@@ -1,6 +1,8 @@
 ( function( $ ) {
 function scrollBanner() {
+    var MQL = 992;
 	$(document).scroll(function(){
+        if ($(window).width() > MQL) {
 		var scrollPos = $(this).scrollTop();
 		$('#header-text').css({
 			'top' : (scrollPos/3)+'px',
@@ -9,6 +11,7 @@ function scrollBanner() {
 		$('#masthead').css({
 			'background-position' : 'center ' + (-scrollPos/2)+'px'
 		});
+    }
 	});
 }
 scrollBanner();
