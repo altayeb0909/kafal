@@ -4,7 +4,7 @@ Theme URI: https://shubhampandey.in/kafal
 Author: Shubham Pandey
 Author URI: http://shubhampandey.in
 Description: A Bootstrap Theme Based on Clean Blog Template from Start Bootstrap. A beautifully designed responsive blogging theme. Custom header with Parallax effect.
-Version: 1.0.8
+Version: 1.0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kafal
@@ -367,4 +367,7 @@ aside a{
 .site-heading hr.small.archive{
 	position: relative;
 	clip: auto;
+}
+.entry-content a{
+	text-decoration: underline;
 }

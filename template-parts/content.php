@@ -11,11 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-preview' ); ?>>
 	<?php
 		if ( ! is_single() ):
-			if ( is_single() ) :
-				the_title( '<h1 class="post-title">', '</h1>' );
-			else :
-				the_title( '<h2 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+			the_title( '<h2 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		?>
 		<p class="post-meta">
 			<?php kafal_posted_on(); ?>
@@ -23,6 +19,9 @@
 		<?php
 		endif;
 		if ( is_single() ) :
+			?>
+			<div class="entry-content">
+			<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'kafal' ), array( 'span' => array( 'class' => array() ) ) ),
@@ -32,6 +31,9 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kafal' ),
 				'after'  => '</div>',
 			) );
+			?>
+			</div>
+			<?php
 		else:
 			the_excerpt();
 		endif;

@@ -81,7 +81,7 @@ if ( post_password_required() ) {
 
 		'email' => '<div class="comment-form-email form-group"><label class="control-label col-sm-2" for="email">' . __( 'Email *', 'kafal' ) . '</label><div class="col-sm-10"><input id="email"  placeholder="' . ( $req ? 'Required' : '' ) . '" name="email" class="form-control" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div></div>',
 
-		'url' => '<div class="comment-form-url form-group"><label class="control-label col-sm-2" for="url">' . __( 'Websit *', 'kafal' ) . '</label><div class="col-sm-10">' . '<input id="url" name="url" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>',
+		'url' => '<div class="comment-form-url form-group"><label class="control-label col-sm-2" for="url">' . __( 'Website *', 'kafal' ) . '</label><div class="col-sm-10">' . '<input id="url" name="url" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div></div>',
 	);
 
 	$args = array(
@@ -95,6 +95,7 @@ if ( post_password_required() ) {
 		'label_submit'      => __( 'Post Comment', 'kafal' ),
 		'format'            => 'xhtml',
 		'class_submit'      => 'btn btn-info pull-right',
+		'submit_button' => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" /><div class="clearfix"></div>',
 
 		'comment_field' =>  '<div class="comment-form-comment form-group"><label class="control-label col-sm-2" for="comment">' . _x( 'Comment *', 'noun', 'kafal' ) . '</label><div class="col-sm-10"><textarea id="comment" class="form-control" name="comment" placeholder="Your Comment Here" cols="45" rows="8" aria-required="true">' . '</textarea></div></div>',
 
