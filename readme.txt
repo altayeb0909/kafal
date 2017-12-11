@@ -3,8 +3,8 @@
 Contributors: shubham9411
 Tags: blog, one-column, custom-header, custom-menu, editor-style, featured-images, responsive-layout, rtl-language-support, sticky-post, translation-ready,  custom-colors, threaded-comments, custom-background, theme-options
 Requires at least: 4.0
-Tested up to: 4.8.1
-Stable tag: 1.0.9
+Tested up to: 4.9.1
+Stable tag: 1.0.10
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,6 +69,10 @@ Does this theme support any plugins?
 Kafal includes support for Infinite Scroll in Jetpack.
 
 ### Changelog
+
+1.0.10
+
+* Tested with WP 4.9.1
 
 1.0.9
 

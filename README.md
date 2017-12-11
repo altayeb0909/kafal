@@ -10,9 +10,9 @@ Tags: blog, one-column, custom-header, custom-menu, editor-style, featured-image
 
 Requires at least: 4.0
 
-Tested up to: 4.8.1
+Tested up to: 4.9.1
 
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 
 License: GNU General Public License v2 or later
 
@@ -79,6 +79,10 @@ Kafal includes support for Infinite Scroll in Jetpack.
 
 ### Changelog
 
+1.0.10
+
+* Tested with WP 4.9.1
+
 1.0.9
 
 * Some styles and floats cleared
@@ -119,4 +123,4 @@ Kafal includes support for Infinite Scroll in Jetpack.
 
 1.0.0
 
-*Initial release Released: 19 June, 2017
+* Initial release Released: 19 June, 2017
